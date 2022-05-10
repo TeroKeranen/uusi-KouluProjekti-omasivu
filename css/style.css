@@ -15,13 +15,16 @@ main {
   background-image: url("../img/tuuli.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 1000px;
+  height: 1500px;
   max-width: 90%;
   margin: 0 auto;
 }
 
-
-/* Image slider */
+/*
+================
+ Image slider
+===============
+*/
 
 .slider-container {
   position: relative;
@@ -38,6 +41,7 @@ main {
   height: 100%;
   display: grid;
   place-items: center;
+  transition: all 0.25s ease-in-out;
   align-items: center;
 }
 
@@ -48,14 +52,12 @@ main {
   text-shadow: 0 0 8px black;
 }
 
-
 .slide-img {
   height: 80%;
   width: 60%;
   box-shadow: 0 0 30px rgb(39, 58, 68);
   border-radius: 30px;
   object-fit: cover;
-
 }
 
 .btn-container {
@@ -70,20 +72,115 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .btn-icon {
   height: 24px;
   width: 24px;
-
 }
 
 .btn-left {
   left: 10%;
-
 }
 
 .btn-right {
   right: 10%;
+}
+
+/*
+====================
+Kysymykset
+====================
+*/
+
+/* Kysymyksen takana oleva background*/
+.kysymykset {
+
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  width: 70%;
+  height: auto;
+  padding:2rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 30px rgb(27, 53, 39); 
+
+}
+
+.title {
+  margin-top: 2vh;
+  margin-bottom: 4rem;
+}
+
+.title h2 {
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+/**/
+.kysymys-center {
+  width: 30vw;
+  margin: 0 auto;
+  
+  
+}
+
+/* Tämä on box jossa on tieto ja nappi*/
+.kysymys {
+  background: rgba(252, 252, 252, 0.6);
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Määrittää kysymyksen ja napin paikan boxin sisällä*/
+.kysymys-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.kysymys-title h3 {
+  font-size: 2rem;
+}
+
+.kysymys-btn {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+
+}
+
+.kysymys-vastaus {
+  padding: 1rem 0 1.5rem 0;
+  border-top: 1px solid black;
+}
+
+
+
+
+/* Nämä ovat javascriptiä varten */
+
+.minus-icon {
+  display: none;
+}
+
+.kysymys-vastaus {
+  display: none;
+}
+
+.show-text .minus-icon {
+  display: inline;
+}
+
+.show-text .kysymys-vastaus {
+  display: block;
+}
+
+.show-text .plus-icon {
+  display: none;
 }
