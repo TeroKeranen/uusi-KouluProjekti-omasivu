@@ -14,8 +14,9 @@ body {
 main {
   background-image: url("../img/tuuli.jpg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  height: 1500px;
+  height: 2000px;
   max-width: 90%;
   margin: 0 auto;
 }
@@ -117,7 +118,7 @@ Kysymykset
 }
 
 .title h2 {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 3.5rem;
   text-align: center;
 }
@@ -133,6 +134,7 @@ Kysymykset
 /* Tämä on box jossa on tieto ja nappi*/
 .kysymys {
   background: rgba(252, 252, 252, 0.6);
+  box-shadow: 0 0 10px rgb(82, 80, 80);
   padding: 1.5rem 1.5rem 0 1.5rem;
   margin-bottom: 1rem;
 }
@@ -182,5 +184,109 @@ Kysymykset
 }
 
 .show-text .plus-icon {
+  display: none;
+}
+
+
+/*
+==============
+modal window
+================
+*/
+
+.modal-container {
+  
+  border-radius: 20px;
+  width: 70%;
+  height: 500px;
+  padding:2rem;
+  margin: 60px auto;
+
+}
+
+.modals {
+  position: relative;
+  height: 600px;
+  /*
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 30px rgb(231, 250, 240); 
+  */
+  
+
+}
+
+.modal {
+  text-align: center;
+  
+  
+  
+
+  
+
+}
+
+.modal1 {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  
+}
+.modal2 {
+  position: absolute;
+  bottom: 0;
+}
+.modal3 {
+  position: absolute;
+  top: 45%;
+  left:50%;
+}
+.modal button {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  
+  
+  box-shadow: 0 0 30px rgb(2, 2, 2);
+}
+.modal h1 {
+  color: white;
+  text-shadow: 0 0 20px black;
+  margin: 0 0 20px 0;
+}
+
+.icon {
+  
+}
+
+
+/*
+.modals {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+}
+
+.modal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 2rem;
+  margin: 0.5rem;
+  background-color: white;
+  
+  width: 50%;
+
+}
+*/
+
+
+.hidden {
   display: none;
 }
