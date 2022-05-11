@@ -9,7 +9,7 @@ sliders.forEach(function (slide, index) {
   slide.style.left = `${index * 100}%`;
 });
 
-// counter that tells if you press nextBtn or prevBtn
+// counter 
 counter = 0;
 
 nextBtn.addEventListener("click", function () {
@@ -24,15 +24,20 @@ prevBtn.addEventListener("click", function () {
   carousel();
 });
 
+
+// main function
 function carousel() {
+
+  // Jos counter on yhtä iso kuin sliderin määrä niin counter palautuu takaisin nollaan, eli palaa kuvan alkuun
   if (counter === sliders.length) {
     counter = 0;
   }
-
+  // jos counter on pienempi kuin nolla (Jos painetaan prev koko ajan) niin se heittää vikaan kuvaan
   if (counter < 0) {
     counter = sliders.length - 1;
   }
 
+  // Heittää translateX oikean arvon 
   sliders.forEach(function (slide) {
     slide.style.transform = `translateX(-${counter * 100}%)`;
   });
