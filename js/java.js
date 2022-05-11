@@ -61,4 +61,46 @@ btns.forEach(function(btn) {
 
 // modals 
 
-const 
+const modal1 = document.querySelector('.peruslataus');
+const modal2 = document.querySelector('.hidaslataus');
+const modal3 = document.querySelector('.teholataus');
+const overlay = document.querySelector('.overlay');
+const btnClose = document.querySelectorAll('.close-modal')
+const btnOpen = document.querySelectorAll('.show-modal')
+
+
+
+
+
+// Open modals
+btnOpen.forEach(function (btn) {
+  
+  btn.addEventListener('click', function(e) {
+    const kysymys = e.currentTarget.parentElement;
+    
+    if (kysymys.classList.contains('modal1')) {
+      modal1.classList.remove('hidden');
+      overlay.classList.remove('hidden');
+    } else if (kysymys.classList.contains('modal2')) {
+      modal2.classList.remove('hidden');
+      overlay.classList.remove('hidden');
+
+    } else if (kysymys.classList.contains('modal3')) {
+      modal3.classList.remove('hidden')
+      overlay.classList.remove('hidden');
+    }
+  })
+})
+
+// hide modals
+btnClose.forEach(function(btn) {
+  btn.addEventListener('click', function () {
+
+    modal1.classList.add('hidden');
+    modal2.classList.add('hidden');
+    modal3.classList.add('hidden');
+    overlay.classList.add('hidden');
+
+
+  })
+})
