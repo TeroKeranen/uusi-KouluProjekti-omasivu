@@ -369,6 +369,11 @@ modal window
     font-size: 2rem;
   }
 
+  .kysymys-title h3 {
+    font-size: 1.5rem;
+    
+  }
+
   .kysymys-center {
     width: 60vw;
   }
@@ -391,6 +396,12 @@ modal window
   .modal button {
     width: 50px;
     height: 50px;
+  }
+
+  .modal h1 {
+
+    font-size: 1.3rem;
+
   }
 
   .modal3 {
