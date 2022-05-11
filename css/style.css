@@ -399,7 +399,7 @@ modal window
 
 
   .modal-box {
-    bottom: -150%;
+    bottom: -200%;
     width: 100%;
     left:0;
 
@@ -407,7 +407,8 @@ modal window
   }
 
   .overlay {
-    top: 150%;
+    
+    height: 2000px;
   }
 
 
