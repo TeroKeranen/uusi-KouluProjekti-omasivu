@@ -398,6 +398,18 @@ modal window
   }
 
 
+  .modal-box {
+    bottom: -100%;
+    width: 100%;
+    left:0;
+    
+    
+  }
+
+  .overlay {
+    top: 20%;
+  }
+
 
   
 
